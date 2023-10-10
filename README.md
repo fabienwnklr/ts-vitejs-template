@@ -2,7 +2,14 @@
 
 Template using vitejs and typescript (and more) for create easily and quickly nice JS library !
 
-## Features
+## Table of contents
+
+- [Features](#features)
+- [Checklist](#checklist)
+- [Usage](#usage)
+- [Build](#build)
+- [Docs](#docs)
+- [Release](#release)
 
 ## Features
 
@@ -48,7 +55,7 @@ yarn build
 
 And you will see the generated file in dist that ready to be served.
 
-## Build docs
+## Docs
 
 ### Docusaurus website
 Run dev mode website
