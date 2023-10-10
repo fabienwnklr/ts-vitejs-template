@@ -6,17 +6,23 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "docs": "cd docs && yarn start",
+    "build:api": "npx typedoc --excludePrivate --plugin typedoc-plugin-markdown --out docs/docs/api src/**/*.ts && cp dist/* docs/static",
+    "preview": "vite preview",
+    "release": "commit-and-tag-version"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
+    "commit-and-tag-version": "^11.3.0",
     "eslint": "^8.51.0",
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "sass": "^1.69.1",
+    "typedoc": "^0.25.2",
+    "typedoc-plugin-markdown": "^3.16.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.0",
