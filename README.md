@@ -20,6 +20,7 @@ Template using vitejs and typescript (and more) for create easily and quickly ni
 - 💄 Perform scss using [sass](https://sass-lang.com/)
 - ⚓ Manage your commit hook width [husky](https://typicode.github.io/husky/)
 - ⚙️ Unit Testing with [Vitest](https://github.com/vitest-dev/vitest)
+- 🧪 E2E Testing with [Playwright](https://github.com/microsoft/playwright)
 - 📝 Generate change log based on commit using [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version)
 - 📄 Generate static site using [docusaurus](https://docusaurus.io/)
 - 🗒 Generate **markdown** doc from ts using [typedoc](https://typedoc.org/) and [typedoc-plugin-markdown](https://github.com/tgreyuk/typedoc-plugin-markdown)
