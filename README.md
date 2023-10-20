@@ -85,6 +85,8 @@ yarn release -- --first-release
 
 ### New release
 
+**See all availables options [here](https://github.com/absolute-version/commit-and-tag-version#first-release)**
+
 ```bash
 yarn release
 ```
@@ -100,5 +102,3 @@ or you can pass specific version
 ```bash
 yarn release -- --release-as 1.1.0
 ```
-
-**See more options [here](https://github.com/absolute-version/commit-and-tag-version#first-release)**
