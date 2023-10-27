@@ -6,7 +6,7 @@
  */
 export function isObject(item: any): boolean {
   return item === Object(item) && !Array.isArray(item);
-};
+}
 
 /**
  * @description Method to check if an item is truthy

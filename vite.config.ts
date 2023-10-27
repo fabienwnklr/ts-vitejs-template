@@ -20,14 +20,15 @@ export default defineConfig({
   plugins: [
     dts({
       insertTypesEntry: true,
-      //   rollupTypes: true // uncomment If you want to merge all declarations into one file
+      rollupTypes: true // comment if you won't to merge all declarations into one file
     }),
     {
-      name: 'postbuild-commands', // the name of your custom plugin. Could be anything.
-      closeBundle: async () => {
-        console.log('Build docs...');
+      name: 'postbuild-command', // the name of your custom plugin. Could be anything.
+      closeBundle: async function() {
+        const start = Date.now();
+        console.log('\x1b[36m%s\x1b[0m', `[postbuild-command] Build JS docs files...`)
         execSync('npm run build:docs'); // run during closeBundle hook. https://rollupjs.org/guide/en/#closebundle
-        console.log('Docs build !');
+        console.log('\x1b[32m%s\x1b[0m', `[postbuild-command] ✓ Docs build in ${(Date.now() - start) / 1000}s`)
       },
     },
   ],

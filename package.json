@@ -37,7 +37,7 @@
     "dev:docs": "cd docs/ && npm run start",
     "build": "tsc && vite build",
     "build:api": "npx typedoc --gitRevision master --excludePrivate --plugin typedoc-plugin-markdown --out docs/docs/api src/**/*.ts",
-    "build:docs": "cp dist/* docs/static",
+    "build:docs": "cp dist/myclass.js docs/static",
     "test": "npm run test:unit && npm run test:e2e",
     "test:e2e": "playwright test",
     "test:unit": "vitest run",

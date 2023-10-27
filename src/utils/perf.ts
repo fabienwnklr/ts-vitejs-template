@@ -77,7 +77,6 @@ export function throttle<T extends (...args: any) => any>(func: T, limit: number
  * Measure time executing function
  * @param func
  * @param label
- * @returns
  */
 export function measureTime<T extends (...args: any[]) => any>(func: T, label: string) {
   if (typeof func !== 'function') {
