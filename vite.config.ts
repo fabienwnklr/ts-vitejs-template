@@ -25,6 +25,10 @@ export default defineConfig({
     {
       name: 'postbuild-command', // the name of your custom plugin. Could be anything.
       closeBundle: async function() {
+        // this hack for don't run this on vitest run
+        // cause this.cache is not present on run vitest
+        if (!this.cache) return;
+        
         const start = Date.now();
         console.log('\x1b[36m%s\x1b[0m', `[postbuild-command] Build JS docs files...`)
         execSync('npm run build:docs'); // run during closeBundle hook. https://rollupjs.org/guide/en/#closebundle
