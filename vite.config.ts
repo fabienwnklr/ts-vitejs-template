@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 import dts from 'vite-plugin-dts';
+import { execSync } from 'node:child_process';
 
 export default defineConfig({
   build: {
@@ -19,8 +20,16 @@ export default defineConfig({
   plugins: [
     dts({
       insertTypesEntry: true,
-    //   rollupTypes: true // uncomment If you want to merge all declarations into one file
+      //   rollupTypes: true // uncomment If you want to merge all declarations into one file
     }),
+    {
+      name: 'postbuild-commands', // the name of your custom plugin. Could be anything.
+      closeBundle: async () => {
+        console.log('Build docs...');
+        execSync('npm run build:docs'); // run during closeBundle hook. https://rollupjs.org/guide/en/#closebundle
+        console.log('Docs build !');
+      },
+    },
   ],
   resolve: {
     alias: {
