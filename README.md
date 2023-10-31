@@ -25,6 +25,8 @@ Template using vitejs and typescript (and more) for create easily and quickly ni
 - 📄 Generate static site using [docusaurus](https://docusaurus.io/)
 - 🗒 Generate **markdown** doc from ts using [typedoc](https://typedoc.org/) and [typedoc-plugin-markdown](https://github.com/tgreyuk/typedoc-plugin-markdown)
 - 🏷️ Generate declaration files with [vite-plugin-dts](https://github.com/qmhc/vite-plugin-dts)
+- Trigger custom event with tiny plugin [MicroEvent](https://github.com/fabienwnklr/ts-vitejs-template/blob/master/src/lib/MicroPlugin.ts)
+- Create plugin(s) with tiny plugin [MicroPlugin](https://github.com/fabienwnklr/ts-vitejs-template/blob/master/src/lib/MicroPlugin.ts)
 
 ## Checklist
 
