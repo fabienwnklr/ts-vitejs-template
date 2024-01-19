@@ -1,2 +1,3 @@
 - Add deploy script for docusaurus
-- 
+- remove playwright
+- update microplugin 
