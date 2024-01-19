@@ -27,7 +27,7 @@ export default defineConfig({
       closeBundle: async function() {
         // this hack for don't run this on vitest run
         // cause this.cache is not present on run vitest
-        if (!this.cache) return;
+        if (process.env.NODE_ENV === 'test') return;
         
         const start = Date.now();
         console.log('\x1b[36m%s\x1b[0m', `[postbuild-command] Build JS docs files...`)
@@ -41,6 +41,9 @@ export default defineConfig({
       find: '~',
       replacement: resolve(__dirname, 'src'),
     },
+  },
+  server: {
+    open: process.env.NODE_ENV !== 'test',
   },
   test: {
     environment: 'jsdom',
