@@ -22,7 +22,7 @@ Template using vitejs and typescript (and more) for create easily and quickly ni
 - ⚙️ Unit Testing with [Vitest](https://github.com/vitest-dev/vitest)
 - 🧪 E2E Testing with [Playwright](https://github.com/microsoft/playwright)
 - 📝 Generate change log based on commit using [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version)
-- 📄 Generate static site using [docusaurus](https://docusaurus.io/)
+- 📄 Generate static site using [vitepress](https://vitepress.dev/)
 - 🗒 Generate **markdown** doc from ts using [typedoc](https://typedoc.org/) and [typedoc-plugin-markdown](https://github.com/tgreyuk/typedoc-plugin-markdown)
 - 🏷️ Generate declaration files with [vite-plugin-dts](https://github.com/qmhc/vite-plugin-dts)
 - Trigger custom event with tiny plugin [MicroEvent](https://github.com/fabienwnklr/ts-vitejs-template/blob/master/src/lib/MicroPlugin.ts)
@@ -60,12 +60,12 @@ And you will see the generated file in dist that ready to be served.
 
 ## Docs
 
-### Docusaurus website
+### Vitepress website
 
 Run dev mode website
 
 ```bash
-yarn docs
+yarn docs:dev
 ```
 
 > **for more you can see `docs/package.json` scripts**

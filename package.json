@@ -50,13 +50,16 @@
     "release:patch": "npm run build && commit-and-tag-version --release-as patch && npm run publish",
     "release:minor": "npm run build && commit-and-tag-version --release-as minor && npm run publish",
     "release:major": "npm run build && commit-and-tag-version --release-as major && npm run publish",
-    "publish": "git push --follow-tags origin master && npm publish --access public"
+    "publish": "git push --follow-tags origin master && npm publish --access public",
+    "docs:dev": "vitepress dev docs --open",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@playwright/test": "^1.39.0",
-    "@types/node": "^20.8.7",
+    "@types/node": "^20.11.19",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
     "commit-and-tag-version": "^11.3.0",
@@ -71,6 +74,7 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.0",
+    "vitepress": "^1.0.0-rc.42",
     "vitest": "^0.34.6"
   }
 }
